@@ -4,9 +4,12 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
